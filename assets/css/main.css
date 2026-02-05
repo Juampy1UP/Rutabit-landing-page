@@ -1,0 +1,657 @@
+:root {
+    /* --- PALETA DE COLORES --- */
+    --color-primary: #0A2463;
+    /* Azul medio */
+    --color-primary-dark: #051130;
+    /* Azul Profundo (Fondo) */
+    --color-accent: #00E5FF;
+    /* Cian Eléctrico */
+    --color-accent-hover: #00B2C7;
+
+    --color-white: #FFFFFF;
+    --color-text-body: #E0E0E0;
+    /* Gris claro para lectura */
+    --color-text-muted: #94A3B8;
+
+    /* --- VARIABLES DE EFECTOS --- */
+    --glass-bg: rgba(10, 36, 99, 0.35);
+    --glass-border: rgba(0, 229, 255, 0.15);
+    --shadow-glow: 0 0 20px rgba(0, 229, 255, 0.15);
+
+    /* --- TIPOGRAFÍA --- */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Animación más fluida */
+}
+
+/* --- 1. RESET Y BASES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) var(--color-primary-dark);
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    /* Texto nítido en Mac/iOS */
+}
+
+/* --- SCROLLBAR PERSONALIZADO (Chrome/Edge/Safari) --- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-primary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-hover);
+}
+
+/* --- 2. TIPOGRAFÍA --- */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+}
+
+/* Responsivo automático */
+h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- 3. UTILIDADES --- */
+.section {
+    padding: 80px 0;
+}
+
+.z-index-2 {
+    z-index: 2;
+    position: relative;
+}
+
+.opacity-75 {
+    opacity: 0.75;
+}
+
+.opacity-05 {
+    opacity: 0.05 !important;
+}
+
+.ls-1 {
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+.bitspan {
+    color: var(--color-accent);
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+    /* Fusionado de Extras */
+}
+
+/* Ocultar Scrollbar (Utility) */
+.custom-scrollbar {
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+/* --- 4. BOTONES (UI MEJORADA) --- */
+.btn {
+    border-radius: 50px;
+    /* Más moderno */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px 36px;
+    transition: var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+    will-change: transform, box-shadow;
+    /* Optimización rendimiento */
+}
+
+/* Botón Principal */
+.btn-primary {
+    background-color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    color: var(--color-primary-dark);
+    box-shadow: 0 4px 15px rgba(0, 229, 255, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-white);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
+    /* Glow intenso */
+    transform: translateY(-2px);
+}
+
+/* Botón Outline */
+.btn-outline,
+.btn-outline-light {
+    background: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+}
+
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.btn-outline:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary-dark);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    border-color: white;
+    color: var(--color-primary-dark);
+}
+
+/* --- 5. NAVBAR (MEJORADO PARA MÓVIL) --- */
+.navbar {
+    padding-top: 20px;
+    transition: 0.4s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(5, 17, 48, 0.9);
+    backdrop-filter: blur(15px);
+    /* Efecto vidrio real */
+    -webkit-backdrop-filter: blur(15px);
+    padding: 10px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+/* Línea animada debajo del link */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 0;
+    background-color: var(--color-accent);
+    transition: width 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--color-white) !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Menú Móvil Personalizado */
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(5, 17, 48, 0.95);
+        backdrop-filter: blur(20px);
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* --- 6. HERO SECTION --- */
+.hero-section {
+    background-image: url('../img/hero/hero-bg.jpg');
+    /* Asegurate que la ruta sea correcta */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    /* Asegura centrado */
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(5, 17, 48, 0.98) 0%,
+            rgba(5, 17, 48, 0.8) 60%,
+            rgba(0, 229, 255, 0.1) 100%);
+    z-index: 1;
+}
+
+/* --- 7. TARJETAS & GLASSMORPHISM --- */
+.bg-tech-grid {
+    background-color: var(--color-primary-dark);
+    background-image:
+        linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover solo en escritorio para no molestar en móvil */
+@media (min-width: 992px) {
+    .glass-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 229, 255, 0.1);
+        border-color: rgba(0, 229, 255, 0.3);
+    }
+}
+
+/* Text Glows */
+.text-danger-glow {
+    color: #ff4d4d;
+    text-shadow: 0 0 15px rgba(255, 77, 77, 0.4);
+}
+
+.text-accent-glow {
+    color: var(--color-accent);
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+.border-glow-end {
+    border-right: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+/* --- 8. PLAN DESTACADO (Scale) --- */
+.transform-scale-md {
+    position: relative;
+    z-index: 1;
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.1);
+}
+
+@media (min-width: 992px) {
+    .transform-scale-md {
+        transform: scale(1.08);
+        z-index: 2;
+    }
+}
+
+/* --- 9. ACORDEÓN (FAQ) --- */
+.accordion-item {
+    background: transparent;
+}
+
+.accordion-button {
+    background-color: rgba(255, 255, 255, 0.02) !important;
+    color: var(--color-white) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px !important;
+    margin-bottom: 10px;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(0, 229, 255, 0.1) !important;
+    color: var(--color-accent) !important;
+    border-color: var(--color-accent);
+}
+
+/* Flecha personalizada */
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transition: transform 0.3s;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300E5FF'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-body {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 0;
+}
+
+/* --- 10. FOOTER --- */
+footer a.hover-accent:hover {
+    color: var(--color-accent) !important;
+    transform: translateX(5px);
+    display: inline-block;
+}
+
+/* --- 11. EXTRAS Y ANIMACIONES --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    background: #128c7e;
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.6);
+}
+
+/* PRELOADER */
+.preloader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary-dark);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.logo-pulse {
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    to {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+}
+
+.loading-bar {
+    width: 200px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 15px auto;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.progress {
+    width: 50%;
+    height: 100%;
+    background: var(--color-accent);
+    animation: load 2s infinite ease-in-out;
+}
+
+@keyframes load {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(200%);
+    }
+}
+
+/* --- ANIMACIONES DE HARDWARE --- */
+.floating-anim {
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-anim-delayed {
+    animation: float 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.device-showcase img {
+    transition: transform 0.3s ease;
+}
+
+.device-showcase:hover img {
+    transform: scale(1.05) translateY(-20px);
+}
+
+/* --- OTROS EFECTOS --- */
+.glass-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.2) !important;
+    transform: translateY(-10px) scale(1.02);
+}
+
+.accordion-button::after {
+    filter: brightness(0) invert(1);
+}
+
+.badge.bg-accent {
+    animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 229, 255, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 229, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 229, 255, 0);
+    }
+}
+
+/* --- 12. COMPONENTES: SLIDER PLANES --- */
+.plans-slider-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 0 40px;
+    cursor: grab;
+    scrollbar-width: none;
+    /* Ocultar scrollbar Firefox */
+}
+
+.plans-slider-container::-webkit-scrollbar {
+    display: none;
+    /* Ocultar scrollbar Chrome */
+}
+
+.plans-slider {
+    display: flex;
+    gap: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    min-width: max-content;
+}
+
+.plan-card-wrapper {
+    width: 300px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+/* Glow especial para el plan elegido */
+.shadow-glow {
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.15);
+}
+
+/* --- 13. OPTIMIZACIÓN MÓVIL (MEDIA QUERIES) --- */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    /* Hero adjustments */
+    .hero-section {
+        background-attachment: scroll;
+    }
+
+    /* Cards adjustments */
+    .glass-card {
+        padding: 1.5rem;
+    }
+
+    .border-glow-end {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Buttons */
+    .btn {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 0.9rem;
+    }
+
+    .d-flex.gap-3.flex-wrap {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p.lead {
+        font-size: 1rem;
+    }
+
+    /* Navbar Brand */
+    .navbar-brand img {
+        height: 35px;
+    }
+
+    /* Carrusel Planes (Scroll Snap para Móvil) */
+    .plans-slider-container {
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .plan-card-wrapper {
+        scroll-snap-align: center;
+    }
+}
+
+/* --- 14. OPTIMIZACIÓN DESKTOP (LARGE SCREENS) --- */
+@media (min-width: 992px) {
+
+    /* Centrar planes si hay espacio */
+    .plans-slider {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

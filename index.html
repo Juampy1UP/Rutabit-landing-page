@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>RUTABIT | Gestión de Flotas</title>
+    <meta name="description"
+        content="Sistema de monitoreo satelital para camiones. Corte de motor, telemetría y gestión de flotas. Pasá de alquilar a ser DUEÑO de tu seguridad.">
+    <meta name="keywords"
+        content="rastreo satelital, gps camiones, seguridad logistica, control de flota, traccar, rutabit, argentina">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rutabit.com.ar/">
+
+    <meta name="geo.region" content="AR-B">
+    <meta name="geo.placename" content="Buenos Aires">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rutabit.com.ar/">
+    <meta property="og:title" content="RUTABIT - Control Total de tu Flota">
+    <meta property="og:description" content="Dejá de pagar alquileres. Equipos propios y monitoreo real.">
+    <meta property="og:image" content="https://rutabit.com.ar/assets/img/logo/rutabit-social-card.jpg">
+
+    <link rel="icon" type="image/png" href="assets/img/logo/rutabit-logo.png">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo/rutabit-logo.png">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+    <div id="preloader" class="preloader-container">
+        <div class="text-center">
+            <div class="mb-3">
+                <i class="bi bi-cpu text-accent display-1 logo-pulse" aria-hidden="true"></i>
+            </div>
+            <h2 class="h5 text-white fw-bold tracking-widest">RUTA<span class="bitspan">BIT</span><span
+                    class="text-accent">.SYS</span></h2>
+            <div class="loading-bar mt-3">
+                <div class="progress"></div>
+            </div>
+            <small class="text-white-50 mt-2 d-block blink-text">ESTABLECIENDO CONEXIÓN SATELITAL...</small>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark transition-all" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="assets/img/brand/rutabit-logo.png" alt="Rutabit Logo" width="40" height="40">
+                <span class="font-heading fw-bold text-white tracking-wide">RUTA<span class="bitspan">BIT</span></span>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+                    <li class="nav-item">
+                        <a href="https://monitoreo.rutabit.com.ar" class="btn btn-outline btn-sm rounded-pill px-4">
+                            Acceso Clientes <i class="bi bi-box-arrow-in-right ms-1" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero-section d-flex align-items-center position-relative overflow-hidden">
+        <div class="overlay"></div>
+
+        <div class="container position-relative z-index-2">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-7 text-white" data-aos="fade-up">
+                    <div class="badge bg-primary-dark border border-accent text-accent mb-3 px-3 py-2 rounded-pill">
+                        <i class="bi bi-shield-check me-2" aria-hidden="true"></i> Seguridad Logística 4.0
+                    </div>
+                    <h1 class="display-3 fw-bold mb-3">
+                        De expuesto, al <span class="bitspan">CONTROL</span> total de tu seguridad.
+                    </h1>
+                    <p class="lead text-light-50 mb-4" style="max-width: 600px;">
+                        Dejá de preocuparte por sistemas obsoletos o contratos complicados.
+                        Con Rutabit, <strong>tenés tecnología de punta siempre activa y a tu servicio.</strong>. Incluye
+                        corte de motor, ubicación exacta y monitoreo de audio en cabina.
+                    </p>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#contacto" class="btn btn-primary btn-lg px-5">
+                            Cotizar Ahora <i class="bi bi-whatsapp ms-2" aria-hidden="true"></i>
+                        </a>
+                        <a href="/platform/index.html" class="btn btn-outline-light btn-lg px-5" target="_blank"
+                            rel="noopener noreferrer">
+                            Ver Demo <i class="bi bi-box-arrow-in-right ms-2" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="row mt-5 pt-4 border-top border-secondary opacity-75">
+                        <div class="col-auto">
+                            <h3 class="h5 fw-bold text-accent mb-0">+500</h3>
+                            <small>Camiones Protegidos</small>
+                        </div>
+                        <div class="col-auto border-start border-secondary ps-4">
+                            <h3 class="h5 fw-bold text-accent mb-0">24/7</h3>
+                            <small>Soporte Real</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="position-absolute bottom-0 start-0 w-100">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true">
+                <path fill="#051130" fill-opacity="1"
+                    d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1440,192L1440,320L1344,320C1248,320,1152,320,1056,320C960,320,864,320,768,320C672,320,576,320,480,320C384,320,288,320,192,320C96,320,48,320,0,320Z">
+                </path>
+            </svg>
+        </div>
+    </header>
+
+    <section id="servicios" class="section bg-tech-grid">
+        <div class="container position-relative z-index-2">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <div class="glass-card rounded-3 p-4 p-md-5 overflow-hidden" data-aos="fade-up">
+
+                        <div class="text-center mb-5">
+                            <span class="text-accent text-uppercase fw-bold ls-1 small opacity-75">Análisis de
+                                Costos</span>
+                            <h2 class="text-white fw-bold mt-2">La Verdad sobre tu Dinero</h2>
+                        </div>
+
+                        <div class="row align-items-center">
+                            <div class="col-md-6 mb-4 mb-md-0 border-glow-end pe-md-5">
+                                <h3 class="h5 text-danger-glow mb-4 fw-bold text-uppercase ls-1">
+                                    <i class="bi bi-x-octagon me-2" aria-hidden="true"></i>Alquiler Tradicional
+                                </h3>
+                                <ul class="list-unstyled d-flex flex-column gap-3 text-light-50">
+                                    <li class="d-flex align-items-start"><i class="bi bi-x text-danger me-2 mt-1"
+                                            aria-hidden="true"></i>
+                                        <span>Cuotas infladas por equipos básicos.</span>
+                                    </li>
+                                    <li class="d-flex align-items-start"><i class="bi bi-x text-danger me-2 mt-1"
+                                            aria-hidden="true"></i>
+                                        <span>Sin funciones premium (solo rastreo).</span>
+                                    </li>
+                                    <li class="d-flex align-items-start"><i class="bi bi-x text-danger me-2 mt-1"
+                                            aria-hidden="true"></i>
+                                        <span>Burocracia: Contratos largos y lentos.</span>
+                                    </li>
+                                    <li class="d-flex align-items-start"><i class="bi bi-x text-danger me-2 mt-1"
+                                            aria-hidden="true"></i>
+                                        <span>Gasto Anual Excesivo: $480.000+</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6 ps-md-5 position-relative">
+                                <div class="position-absolute top-50 start-50 translate-middle bg-accent opacity-10 rounded-circle"
+                                    style="width: 200px; height: 200px; filter: blur(60px); z-index: -1;"></div>
+
+                                <h3 class="h5 text-accent-glow mb-4 fw-bold text-uppercase ls-1">
+                                    <i class="bi bi-shield-check me-2" aria-hidden="true"></i>Modelo Rutabit
+                                </h3>
+                                <ul class="list-unstyled d-flex flex-column gap-3 text-white">
+                                    <li class="d-flex align-items-start"><i class="bi bi-check-lg text-accent me-2 mt-1"
+                                            aria-hidden="true"></i>
+                                        <span>Ahorrás un 50% mensual (Precio justo).</span>
+                                    </li>
+                                    <li class="d-flex align-items-start"><i class="bi bi-check-lg text-accent me-2 mt-1"
+                                            aria-hidden="true"></i>
+                                        <span>Tecnología Full: Corte de motor y Audio..</span>
+                                    </li>
+                                    <li class="d-flex align-items-start"><i class="bi bi-check-lg text-accent me-2 mt-1"
+                                            aria-hidden="true"></i>
+                                        <span>Sin burocracia: Contratás en 1 minuto.</span>
+                                    </li>
+                                    <li class="d-flex align-items-start"><i class="bi bi-check-lg text-accent me-2 mt-1"
+                                            aria-hidden="true"></i>
+                                        <span>Inversión Inteligente: Pagás por lo que usás.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-primary-dark">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-accent text-uppercase fw-bold ls-1">Simple y Rápido</span>
+                <h2 class="text-white mt-2">Protegido en 3 Pasos</h2>
+            </div>
+
+            <div class="row text-center g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="position-relative">
+                        <div class="display-1 text-secondary opacity-05 fw-bold position-absolute top-0 start-50 translate-middle-x"
+                            style="z-index: 0;">01</div>
+                        <div
+                            class="bg-primary d-inline-block rounded-circle p-4 mb-4 shadow-lg border border-accent position-relative z-index-2">
+                            <i class="bi bi-tools text-white h2" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h5 text-white position-relative z-index-2">Instalación Oculta</h3>
+                        <p class="text-light-50 small mx-auto position-relative z-index-2" style="max-width: 250px;">
+                            Colocamos el equipo de forma invisible y segura. Sin cables a la vista, sin riesgos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="position-relative">
+                        <div class="display-1 text-secondary opacity-05 fw-bold position-absolute top-0 start-50 translate-middle-x"
+                            style="z-index: 0;">02</div>
+                        <div
+                            class="bg-primary d-inline-block rounded-circle p-4 mb-4 shadow-lg border border-accent position-relative z-index-2">
+                            <i class="bi bi-phone text-white h2" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h5 text-white position-relative z-index-2">Descargás la App</h3>
+                        <p class="text-light-50 small mx-auto position-relative z-index-2" style="max-width: 250px;">
+                            Configuramos tu usuario y alertas en App/Web de inmediato. Control total desde tu celular o
+                            PC.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="position-relative">
+                        <div class="display-1 text-secondary opacity-05 fw-bold position-absolute top-0 start-50 translate-middle-x"
+                            style="z-index: 0;">03</div>
+                        <div
+                            class="bg-primary d-inline-block rounded-circle p-4 mb-4 shadow-lg border border-accent position-relative z-index-2">
+                            <i class="bi bi-shield-check text-white h2" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="h5 text-white position-relative z-index-2">Control Total</h3>
+                        <p class="text-light-50 small mx-auto position-relative z-index-2" style="max-width: 250px;">
+                            ¡Listo! Tenés el control real: ubicación, corte de motor y audio en vivo desde tu mano.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-primary-dark position-relative overflow-hidden">
+        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-05"
+            style="background-image: radial-gradient(#00E5FF 1px, transparent 1px); background-size: 30px 30px;">
+        </div>
+
+        <div class="container position-relative z-index-2">
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <span class="text-accent text-uppercase fw-bold ls-1">Tecnología Propia</span>
+                    <h2 class="display-5 fw-bold text-white mt-2">CONTROL TOTAL</h2>
+                    <p class="text-light-50 lead mb-4">
+                        No instalamos simples rastreadores. Instalamos un <strong>Módulo de Telemetría 4G</strong>
+                        pre-configurado con el sistema operativo Rutabit.
+                    </p>
+
+                    <ul class="list-unstyled d-flex flex-column gap-3 text-white">
+                        <li class="d-flex align-items-center">
+                            <i class="bi bi-cpu text-accent fs-4 me-3"></i>
+                            <div>
+                                <strong>Procesador de Eventos</strong>
+                                <div class="small text-white-50">Detecta choques y frenadas bruscas al instante.</div>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="bi bi-wifi text-accent fs-4 me-3"></i>
+                            <div>
+                                <strong>Multibanda 4G + 2G</strong>
+                                <div class="small text-white-50">Señal estable incluso en zonas rurales.</div>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="bi bi-battery-charging text-accent fs-4 me-3"></i>
+                            <div>
+                                <strong>Batería de Respaldo</strong>
+                                <div class="small text-white-50">Sigue transmitiendo si cortan los cables.</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 text-center" data-aos="zoom-in">
+                    <div class="device-showcase position-relative">
+                        <div class="position-absolute top-50 start-50 translate-middle bg-accent rounded-circle"
+                            style="width: 300px; height: 300px; filter: blur(80px); opacity: 0.2; z-index: 0;"></div>
+
+                        <img src="assets/img/device/device-render.png" alt="Rutabit Device"
+                            class="img-fluid position-relative z-index-2 floating-anim"
+                            style="max-width: 80%; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));">
+
+                        <div class="glass-card position-absolute top-0 end-0 p-3 rounded-3 floating-anim-delayed"
+                            style="max-width: 150px; transform: rotate(5deg);">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="d-inline-block bg-success rounded-circle"
+                                    style="width: 10px; height: 10px;"></span>
+                                <small class="text-white fw-bold">ONLINE</small>
+                            </div>
+                            <small class="text-white-50" style="font-size: 0.7rem;">Ping: 24ms</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="planes" class="section bg-tech-grid overflow-hidden">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-accent text-uppercase fw-bold ls-1">Nuestras Soluciones</span>
+                <h2 class="text-white mt-2">Planes de Monitoreo</h2>
+                <p class="text-white-50">Kit de Instalación e Integración: $150.000 (Pago único inicial)</p>
+            </div>
+
+            <div class="plans-slider-container">
+                <div class="plans-slider">
+
+                    <div class="plan-card-wrapper">
+                        <div class="glass-card p-4 rounded-3 border-secondary h-100">
+                            <h3 class="h5 text-white fw-bold mb-2">RUTA-CITY</h3>
+                            <div class="display-4 fw-bold text-white mb-0">$15.000<span
+                                    class="fs-6 text-white-50">/mes</span></div>
+                            <p class="text-white-50 small mb-4">Ideal para conductores de autos y motos.</p>
+                            <ul class="list-unstyled d-flex flex-column gap-2 text-light mb-4 small text-start">
+                                <li><i class="bi bi-check-lg text-accent me-2"></i> Reporte cada 60 segundos</li>
+                                <li><i class="bi bi-check-lg text-accent me-2"></i> <strong>Corte de Motor
+                                        Remoto</strong></li>
+                                <li><i class="bi bi-check-lg text-accent me-2"></i> Instalación Ultra-Oculta</li>
+                                <li><i class="bi bi-check-lg text-accent me-2"></i> Alerta de Remolque / Movimiento</li>
+                            </ul>
+                            <a href="https://wa.me/5491153287021?text=Hola, quiero info del plan de $15.000"
+                                class="btn btn-outline-light w-100 btn-sm">SOLICITAR</a>
+                        </div>
+                    </div>
+
+                    <div class="plan-card-wrapper">
+                        <div class="glass-card p-4 rounded-3 border-secondary h-100">
+                            <h3 class="h5 text-white fw-bold mb-2">RUTA-BLINDADO</h3>
+                            <div class="display-4 fw-bold text-white mb-0">$25.000<span
+                                    class="fs-6 text-white-50">/mes</span></div>
+                            <p class="text-white-50 small mb-4">Seguridad esencial para transporte.</p>
+                            <ul class="list-unstyled d-flex flex-column gap-2 text-light mb-4 small text-start">
+                                <li><i class="bi bi-check-lg text-accent me-2"></i> Reporte cada 60 segundos</li>
+                                <li><i class="bi bi-check-lg text-accent me-2"></i> <strong>Corte de Motor +
+                                        SOS</strong></li>
+                                <li><i class="bi bi-check-lg text-accent me-2"></i> Sensores de Puertas y Tráiler</li>
+                                <li><i class="bi bi-check-lg text-accent me-2"></i> Alerta de batería desconectada</li>
+                            </ul>
+                            <a href="https://wa.me/5491153287021?text=Hola, quiero el Plan Basico de $25.000"
+                                class="btn btn-outline-light w-100 btn-sm">ELEGIR BÁSICO</a>
+                        </div>
+                    </div>
+
+                    <div class="plan-card-wrapper">
+                        <div class="glass-card p-4 rounded-3 border-accent transform-scale-md h-100 shadow-glow">
+                            <div
+                                class="position-absolute top-0 start-50 translate-middle badge bg-accent text-primary-dark px-3 py-1 shadow-lg">
+                                MÁS ELEGIDO</div>
+                            <h3 class="h5 text-accent fw-bold mb-2">RUTA-CONTROL</h3>
+                            <div class="display-4 fw-bold text-white mb-0">$37.000<span
+                                    class="fs-6 text-white-50">/mes</span></div>
+                            <p class="text-white-50 small mb-4">Monitoreo auditivo y telemetría avanzada.</p>
+                            <ul class="list-unstyled d-flex flex-column gap-2 text-white mb-4 small text-start">
+                                <li><i class="bi bi-check-circle-fill text-accent me-2"></i> Reporte cada 30 segundos
+                                </li>
+                                <li><i class="bi bi-check-circle-fill text-accent me-2"></i> <strong>Micrófono Espía en
+                                        Vivo</strong></li>
+                                <li><i class="bi bi-check-circle-fill text-accent me-2"></i> Sensor de Impacto
+                                    (G-Sensor)</li>
+                                <li><i class="bi bi-check-circle-fill text-accent me-2"></i> Soporte Prioritario 24/7
+                                </li>
+                            </ul>
+                            <a href="https://wa.me/5491153287021?text=Hola, quiero el Plan Pro de $37.000"
+                                class="btn btn-primary w-100 fw-bold">SOLICITAR PRO</a>
+                        </div>
+                    </div>
+
+                    <div class="plan-card-wrapper">
+                        <div class="glass-card p-4 rounded-3 border-secondary h-100">
+                            <h3 class="h5 text-white fw-bold mb-2">RUTA-ULTIMATE</h3>
+                            <div class="display-4 fw-bold text-white mb-0">$52.000<span
+                                    class="fs-6 text-white-50">/mes</span></div>
+                            <p class="text-white-50 small mb-4">Control total de logística y combustible.</p>
+                            <ul class="list-unstyled d-flex flex-column gap-2 text-light mb-4 small text-start">
+                                <li><i class="bi bi-check-lg text-accent me-2"></i> <strong>Tiempo Real (15
+                                        seg)</strong></li>
+                                <li><i class="bi bi-check-lg text-accent me-2"></i> <strong>Sensor de
+                                        Combustible</strong></li>
+                                <li><i class="bi bi-check-lg text-accent me-2"></i> Audio Bidireccional (Voz)</li>
+                                <li><i class="bi bi-check-lg text-accent me-2"></i> Sensores de Carga Antivándalo</li>
+                            </ul>
+                            <a href="https://wa.me/5491153287021?text=Hola, quiero el Plan Ultimate de $52.000"
+                                class="btn btn-outline-light w-100 btn-sm">ELEGIR ULTIMATE</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-tech-grid">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-accent text-uppercase fw-bold ls-1">Confianza</span>
+                <h2 class="text-white mt-2">Empresas que viajan seguras</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="glass-card p-4 rounded-3 h-100 position-relative">
+                        <i class="bi bi-quote fs-1 text-accent opacity-25 position-absolute top-0 start-0 m-3"
+                            aria-hidden="true"></i>
+                        <p class="text-light-50 mt-3 fst-italic">"Lo que más valoro es que el equipo es mío. Me cansé de
+                            pagar alquileres eternos en otras empresas. Rutabit fue la solución definitiva."</p>
+                        <div class="d-flex align-items-center gap-3 mt-4 border-top border-secondary pt-3">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center fw-bold text-white"
+                                style="width: 40px; height: 40px;">MR</div>
+                            <div>
+                                <h6 class="text-white mb-0 small">Marcelo Rodriguez</h6>
+                                <small class="text-accent" style="font-size: 0.7rem;">Transporte "El Águila"</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-4 rounded-3 h-100 position-relative">
+                        <i class="bi bi-quote fs-1 text-accent opacity-25 position-absolute top-0 start-0 m-3"
+                            aria-hidden="true"></i>
+                        <p class="text-light-50 mt-3 fst-italic">"La plataforma es rapidísima. Antes usaba una que
+                            tardaba minutos en cargar el mapa. Acá veo mis 12 camiones en tiempo real posta."</p>
+                        <div class="d-flex align-items-center gap-3 mt-4 border-top border-secondary pt-3">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center fw-bold text-white"
+                                style="width: 40px; height: 40px;">JL</div>
+                            <div>
+                                <h6 class="text-white mb-0 small">Jorge Lopez</h6>
+                                <small class="text-accent" style="font-size: 0.7rem;">Logística Norte</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-4 rounded-3 h-100 position-relative">
+                        <i class="bi bi-quote fs-1 text-accent opacity-25 position-absolute top-0 start-0 m-3"
+                            aria-hidden="true"></i>
+                        <p class="text-light-50 mt-3 fst-italic">"El soporte por WhatsApp es clave. Tuve una duda un
+                            sábado y me respondieron al toque. Eso no tiene precio en este rubro."</p>
+                        <div class="d-flex align-items-center gap-3 mt-4 border-top border-secondary pt-3">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center fw-bold text-white"
+                                style="width: 40px; height: 40px;">SF</div>
+                            <div>
+                                <h6 class="text-white mb-0 small">Sofia Fernandez</h6>
+                                <small class="text-accent" style="font-size: 0.7rem;">Distribuidora Sur</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-primary-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="text-center mb-5" data-aos="fade-up">
+                        <span class="text-accent text-uppercase fw-bold ls-1">Logística y Soporte</span>
+                        <h2 class="text-white mt-2">Dudas sobre la instalación en Zona Sur</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="accordion" id="faqAccordionL">
+                                <div class="accordion-item bg-transparent border-0 mb-3">
+                                    <h2 class="accordion-header">
+                                        <button
+                                            class="accordion-button collapsed text-white bg-primary-dark border border-secondary rounded-3 shadow-none"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#f1">
+                                            <span class="fw-bold">¿Dónde realizan el trabajo?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="f1" class="accordion-collapse collapse" data-bs-parent="#faqAccordionL">
+                                        <div
+                                            class="accordion-body text-light-50 border border-top-0 border-secondary rounded-bottom-3 pt-3">
+                                            Somos de **Zona Sur** (Monte Grande / Adrogué). Para clientes de la zona,
+                                            podemos ir a domicilio. También disponemos de una **base propia con patio de
+                                            maniobras en Adrogué**, ideal para instalaciones seguras en camiones o autos
+                                            de Zona Norte y CABA.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item bg-transparent border-0 mb-3">
+                                    <h2 class="accordion-header">
+                                        <button
+                                            class="accordion-button collapsed text-white bg-primary-dark border border-secondary rounded-3 shadow-none"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#f2">
+                                            <span class="fw-bold">¿Debo comprar mi propio equipo?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAccordionL">
+                                        <div
+                                            class="accordion-body text-light-50 border border-top-0 border-secondary rounded-bottom-3 pt-3">
+                                            No. Rutabit provee la **Unidad de Inteligencia Satelital**. El pago inicial
+                                            de $150.000 cubre la instalación full, sensores y el derecho de conexión
+                                            perpetuo a nuestro servidor de alta velocidad.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="accordion" id="faqAccordionR">
+                                <div class="accordion-item bg-transparent border-0 mb-3">
+                                    <h2 class="accordion-header">
+                                        <button
+                                            class="accordion-button collapsed text-white bg-primary-dark border border-secondary rounded-3 shadow-none"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#f3">
+                                            <span class="fw-bold">¿Tienen planes para autos y motos?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAccordionR">
+                                        <div
+                                            class="accordion-body text-light-50 border border-top-0 border-secondary rounded-bottom-3 pt-3">
+                                            Sí. Contamos con un plan específico para **conductores de autos y motos**
+                                            que trabajan con aplicaciones o transporte ligero. Ofrecemos abonos
+                                            reducidos de $15.000 con la misma tecnología de seguridad de los camiones.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item bg-transparent border-0 mb-3">
+                                    <h2 class="accordion-header">
+                                        <button
+                                            class="accordion-button collapsed text-white bg-primary-dark border border-secondary rounded-3 shadow-none"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#f4">
+                                            <span class="fw-bold">¿Cómo es la permanencia?</span>
+                                        </button>
+                                    </h2>
+                                    <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAccordionR">
+                                        <div
+                                            class="accordion-body text-light-50 border border-top-0 border-secondary rounded-bottom-3 pt-3">
+                                            No hay contratos abusivos. Si decidís dar de baja el abono mensual, el
+                                            servicio se suspende pero el equipo permanece instalado en tu unidad. Podés
+                                            reactivarlo cuando lo necesites sin pagar una nueva instalación.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-primary-dark pt-5 pb-3 border-top border-secondary position-relative">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+
+                <div class="col-md-4">
+                    <a class="d-flex align-items-center gap-2 mb-3 text-decoration-none" href="#">
+                        <img src="assets/img/brand/rutabit-logo.png" alt="Logo Rutabit" width="30" height="30"
+                            loading="lazy">
+                        <span class="font-heading fw-bold text-white">RUTA<span
+                                class="text-accent bitspan">BIT</span></span>
+                    </a>
+                    <p class="text-white-50 small ">
+                        Logística consciente y seguridad tecnológica. Dejá de ser un inquilino de tu propia flota.
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-white opacity-75 hover-accent" aria-label="Instagram"><i
+                                class="bi bi-instagram fs-5" aria-hidden="true"></i></a>
+                        <a href="#" class="text-white opacity-75 hover-accent" aria-label="LinkedIn"><i
+                                class="bi bi-linkedin fs-5" aria-hidden="true"></i></a>
+                        <a href="#" class="text-white opacity-75 hover-accent" aria-label="WhatsApp"><i
+                                class="bi bi-whatsapp fs-5" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <h5 class="text-white fw-bold h6 mb-3">Empresa</h5>
+                    <ul class="list-unstyled text-light-50 small d-flex flex-column gap-2">
+                        <li><a href="#inicio" class="text-decoration-none hover-accent">Inicio</a></li>
+                        <li><a href="#planes" class="text-decoration-none hover-accent">Precios</a></li>
+                        <li><a href="legal/terminos-y-condiciones.html"
+                                class="text-decoration-none hover-accent">Términos</a></li>
+                        <li><a href="legal/politica-de-privacidad.html"
+                                class="text-decoration-none hover-accent">Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="text-white fw-bold h6 mb-3">Contacto Directo</h5>
+                    <ul class="list-unstyled text-light-50 small d-flex flex-column gap-3">
+                        <li class="d-flex align-items-center"><i class="bi bi-whatsapp text-accent me-2"
+                                aria-hidden="true"></i> +54 9 11 5328-7021</li>
+                        <li class="d-flex align-items-center"><i class="bi bi-envelope text-accent me-2"
+                                aria-hidden="true"></i> contacto@rutabit.com.ar</li>
+                        <li class="d-flex align-items-center"><i class="bi bi-geo-alt text-accent me-2"
+                                aria-hidden="true"></i> Buenos Aires, Argentina</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-top border-secondary mt-5 pt-3 text-center">
+                <p class="text-white-50 small mb-0">&copy; <span id="year"></span> Rutabit
+                    Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <a href="https://wa.me/5491153287021?text=Hola,%20quisiera%20cotizar%20Rutabit" class="whatsapp-float"
+        target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
+</body>
+
+</html>
